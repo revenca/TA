@@ -24,7 +24,7 @@ Paragraf sumber
 
 | Komponen | Teknologi |
 |---|---|
-| Embedding | `allenai/scibert_scivocab_uncased` (768-dim, CLS token) |
+| Embedding | `allenai/specter2` (768-dim, CLS token) |
 | Generator (HyDE + CoT) | GPT-4o-mini via OpenRouter |
 | Judge (RAGAS) | DeepSeek via OpenRouter (beda vendor → hindari self-bias) |
 | Vector DB | FAISS `IndexFlatIP` (cosine via inner product) |
