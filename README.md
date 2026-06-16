@@ -19,7 +19,7 @@ Paragraf sumber
                          │
                   hasil_prediksi.csv
                          │
-   [EVALUASI]──────► RAGAS + Claude Sonnet 4.5 (judge) → hasil_ragas.csv
+   [EVALUASI]──────► RAGAS + Deepseek (judge) → hasil_ragas.csv
 ```
 
 | Komponen | Teknologi |
