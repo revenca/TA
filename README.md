@@ -1,8 +1,8 @@
-# Sistem Citation Recommendation — HyDE + CoT + RAG (SciBERT)
+# Sistem Citation Recommendation — HyDE + CoT + RAG (Specter2)
 
 Sistem rekomendasi sitasi untuk skripsi S1. Menerima paragraf dari paper ilmiah,
 lalu merekomendasikan paper referensi yang relevan beserta teks sitasinya
-menggunakan query expansion (HyDE + CoT) dan vector embeddings (SciBERT).
+menggunakan query expansion (HyDE + CoT) dan vector embeddings (Specter2).
 
 ## Arsitektur
 
@@ -11,7 +11,7 @@ Paragraf sumber
    │
    ├─[HyDE]──────► GPT-4o-mini hasilkan hypothetical abstract
    │                     │
-   │              SciBERT embed (768-dim, CLS, L2-norm)
+   │              Specter2 embed (768-dim, CLS, L2-norm)
    │                     │
    ├─[RETRIEVAL]──► FAISS IndexFlatIP → top-5 chunk (exclude paper sama)
    │                     │
@@ -26,7 +26,7 @@ Paragraf sumber
 |---|---|
 | Embedding | `allenai/scibert_scivocab_uncased` (768-dim, CLS token) |
 | Generator (HyDE + CoT) | GPT-4o-mini via OpenRouter |
-| Judge (RAGAS) | Claude Sonnet 4.5 via OpenRouter (beda vendor → hindari self-bias) |
+| Judge (RAGAS) | DeepSeek via OpenRouter (beda vendor → hindari self-bias) |
 | Vector DB | FAISS `IndexFlatIP` (cosine via inner product) |
 
 ## Setup
